@@ -14,7 +14,7 @@ export default function Footer() {
         
       </div>
       <div id="footerBottom">
-        <h4>&copy;{moment().format(`YYYY`)}&nbsp;CleanWise&nbsp;Solutions.&nbsp;All&nbsp;Rights&nbsp;Reserved.</h4>
+        <p>&copy;{moment().format(`YYYY`)}&nbsp;CleanWise&nbsp;Solutions.&nbsp;All&nbsp;Rights&nbsp;Reserved.</p>
       </div>
     </footer>
   </>)
