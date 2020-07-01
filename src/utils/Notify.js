@@ -33,7 +33,7 @@ export function NotifyProvider({ children }) {
 
       {alert && alert !== null ?
         <div className={alertStyle} onClick={() => setAlertStyle(`notify hide ${alert.status}`)}>
-          <h4>{alert.message}</h4>
+          <h5>{alert.message}</h5>
         </div> : null}
 
       {children}

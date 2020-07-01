@@ -21,7 +21,32 @@ export default function Nav() {
   return (<>
     <nav>
       <div id={nav}>
-        <Link to="/"><div className={page === `home` ? "navBtnActive" : "navBtn"}><h3>Home</h3></div></Link>
+        <div id="navL">
+          <Link to="/"><img src="/images/branding/align_color.png" alt="CleanWise Solutions" /></Link>
+        </div>
+        <div id="navC" />
+        <div id="navR">
+          <Link to="/">
+            <div className={page === `home` ? "navBtnActive" : "navBtn"}>
+              <p>Home</p>
+              <div className="navBtnLine" />
+            </div>
+          </Link>
+          <div className="navBtnBreak" />
+          <Link to="/about">
+            <div className={page === `about` ? "navBtnActive" : "navBtn"}>
+              <p>About</p>
+              <div className="navBtnLine" />
+            </div>
+          </Link>
+          <div className="navBtnBreak" />
+          <Link to="/contact">
+            <div className={page === `contact` ? "navBtnActive" : "navBtn"}>
+              <p>Contact</p>
+              <div className="navBtnLine" />
+            </div>
+          </Link>
+        </div>
       </div>
     </nav>
   </>)
