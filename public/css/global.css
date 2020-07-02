@@ -50,29 +50,6 @@
     --backgroundDark: #dce8ec;
 }
 
-/* SCROLLBAR */
-
-::-webkit-scrollbar {
-    width: 12px;
-    background-color: var(--backgroundClear);
-}
-
-::-webkit-scrollbar-track {
-    background-color: var(--backgroundClear);
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--txtTertiary);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: var(--txtSecondary);
-}
-
-::-webkit-scrollbar-thumb:active {
-    background-color: var(--txtPrimary);
-}
-
 /* RULES */
 
 html {
@@ -92,7 +69,7 @@ html {
 }
 
 a {
-    color: var(--txtPrimary);
+    color: inherit;
 }
 
 h1 {
@@ -123,8 +100,17 @@ h6 {
     padding: 48px 0 24px 0;
     line-height: 1;
     text-align: center;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: 3px;
+}
+
+.titleLine {
+    width: 96px;
+    height: 2px;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--txtPrimaryContrast);
 }
 
 input::placeholder {
@@ -148,10 +134,6 @@ body {
     line-height: normal;
     color: var(--txtPrimary);
     background-color: var(--backgroundDefault);
-    /* background-image: url(../images/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; */
 }
 
 #root {
@@ -317,7 +299,8 @@ nav {
 }
 
 #navL {
-    padding: 12px 12px 12px 0;
+    width: max-content;
+    padding: 12px 104px 12px 0px;
 }
 
 #navL img {
@@ -327,13 +310,39 @@ nav {
 #navC {
     width: 100%;
     padding: 12px 12px 12px 12px;
+    line-height: 1;
+}
+
+.navCBlock {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 12px;
+}
+.navCBreak {
+    display: inline-block;
+    width: 36px;
+}
+
+#navC img, .footer3rdBlock img {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 24px;
+    min-width: 24px;
+    max-height: 24px;
+    min-height: 24px;
+}
+
+#navC h6 {
+    display: inline-block;
+    margin-top: 5px;
+    font-weight: 500;
+    color: var(--txtSecondary);
 }
 
 #navR {
     display: flex;
     flex-wrap: nowrap;
-    width: max-content;
-    padding: 12px 0 12px 12px;
+    padding: 12px 0px 12px 12px;
 }
 
 .navBtn, .navBtnActive {
@@ -404,10 +413,56 @@ footer {
 }
 
 #footerTop {
+    display: flex;
+    flex-wrap: nowrap;
     width: 100%;
-    padding: 64px 0;
-    background: #00000040;
+    background: #00000060;
     text-align: center;
+}
+
+#footerTop a {
+    transition: 0.2s;
+}
+
+#footerTop a:hover {
+    color: var(--primaryLight)
+}
+
+.footer3rd {
+    width: 100%;
+    padding: 48px;
+}
+
+.footer3rdBlock img {
+    vertical-align: top;
+    max-width: 32px;
+    min-width: 32px;
+    max-height: 32px;
+    min-height: 32px;
+    margin-bottom: 8px;;
+}
+
+.footer3rdBreak {
+    width: 100%;
+    height: 24px;
+}
+
+.footer3rd h4 {
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.footer3rd h6 {
+    line-height: 1.5;
+}
+
+.footerLine {
+    min-width: 2px;
+    min-height: 100%;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    background: #00000020;
 }
 
 #footerBottom {
@@ -418,25 +473,44 @@ footer {
     line-height: 1;
 }
 
+#footerBottom p {
+    font-weight: 100;
+}
+
+#footerBottom a {
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+#footerBottom a:hover {
+    color: var(--primaryLight)
+}
+
+#footerIcons {
+    padding: 24px 0 0 0;
+}
+
+.footerIcon {
+    max-width: 48px;
+    margin: 0 8px;
+}
+
 /* HOME */
 
-#homeHero {
-    width: 100%;
-    height: 480px;
-    background: var(--backgroundDark);
-}
 #homeServices {
     width: 100%;
     height: 480px;
     background: var(--secondaryLight);
     color: var(--txtPrimaryContrast);
 }
+
 #homeHow {
     width: 100%;
     height: 480px;
     background: var(--backgroundDark);
     color: var(--txtPrimaryContrast);
 }
+
 #homeClients {
     width: 100%;
     height: 480px;

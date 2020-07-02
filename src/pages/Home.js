@@ -1,31 +1,34 @@
 import React from 'react';
 import { Global } from '../utils/Global';
 import { Notify } from '../utils/Notify';
+import Title from '../components/_loose/Title';
+import HomeHero from '../components/home/HomeHero';
 
 export default function Home() {
   const { checkPage } = React.useContext(Global);
-  const notify = React.useContext(Notify);
   React.useEffect(() => { checkPage(); });
-  React.useEffect(() => { notify(`COVID-19 info alert placeholder`, `info`, 60000); }, []);
+  // const notify = React.useContext(Notify);
+  // React.useEffect(() => { notify(`COVID-19 info alert placeholder`, `info`, 60000); }, []);
 
   return (<>
     <main id="home">
       <section id="home-hero">
-        <div id="homeHero" />
+        <HomeHero />
+        
       </section>
       <section id="home-services">
         <div id="homeServices">
-          <h2 className="title">SERVICES WE PROVIDE</h2>
+          <Title>Services We Provide</Title>
         </div>
       </section>
       <section id="home-how">
         <div id="homeHow">
-          <h2 className="title" style={{ color: `#a0a0a0` }}>HOW IT WORKS</h2>
+          <Title txtStyle={{ color: `#a0a0a0` }} lineStyle={{ background: `#a0a0a0` }}>How It Works</Title>
         </div>
       </section>
       <section id="home-clients">
         <div id="homeClients">
-          <h2 className="title">OUR CLIENTS</h2>
+          <Title>Our Clients</Title>
         </div>
       </section>
     </main>
