@@ -1,0 +1,61 @@
+/* HOME RULES */
+
+/* HERO */
+
+#home-hero {
+    position: relative;
+    width: 100%;
+    height: 640px;
+    padding-top: 140px;
+    background: var(--background-dark);
+    background-image: url(../images/clean4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#home-hero-drop {
+    padding: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(90deg, #f0faff00, #f0faffcc, #f0faffef, #f0faffcc, #f0faff00);
+}
+
+#home-hero-hold {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#home-hero-logo {
+    max-height: 260px;
+}
+
+/* INDUSTRIES */
+
+#home-industries {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    background: var(--secondary-light);
+    color: var(--txt-contrast);
+}
+
+/* SERVICES */
+
+#home-services {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    background: var(--background-dark);
+    color: var(--txt-secondary);
+}
+
+/* HOW */
+
+#home-how {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    background: var(--primary-main);
+    color: var(--txt-contrast);
+}
