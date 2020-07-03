@@ -1,0 +1,387 @@
+/* THEME */
+
+:root {
+    --scale: 1;
+    --primary-light: #00dfc8;
+    --primary-main: #00b4a0;
+    --primary-dark: #007268;
+    --secondary-light: #0080c8;
+    --secondary-main: #005096;
+    --secondary-dark: #003068;
+    --info-main: #005096;
+    --success-main: #00b4a0;
+    --warning-main: #ffb400;
+    --error-main: #ff4064;
+    --background-light: #e4eff4;
+    --background-main: #e0ecf0;
+    --background-dark: #dce8ec;
+    --background-default: #eaf4fa;
+    --background-white: #f0faff;
+    --divider: #50586032;
+    --txt-primary: #505860;
+    --txt-secondary: #505860a0;
+    --txt-tertiary: #50586080;
+    --txt-contrast: #f0faff;
+    --h1: 48px;
+    --h2: 32px;
+    --h3: 24px;
+    --h4: 20px;
+    --h5: 18px;
+    --h6: 16px;
+    --p: 16px;
+    --anim-fast: 0.1s;
+    --anim-normal: 0.2s;
+    --anim-slow: 0.5s;
+}
+
+/* GLOBAL RULES */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--p);
+    font-weight: 300;
+    line-height: normal;
+    color: var(--txt-primary);
+    background-color: var(--background-default);
+}
+
+h1 {
+    font-size: var(--h1);
+}
+
+h2 {
+    font-size: var(--h2);
+}
+
+h3 {
+    font-size: var(--h3);
+}
+
+h4 {
+    font-size: var(--h4);
+}
+
+h5 {
+    font-size: var(--h5);
+}
+
+h6 {
+    font-size: var(--h6);
+}
+
+:focus {
+    outline-color: var(--primary-main);
+}
+
+input::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: var(--txt-tertiary);
+}
+
+textarea::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: var(--txt-tertiary);
+}
+
+/* CUSTOM RULES */
+
+#root {
+    position: relative;
+    min-height: 100vh;
+}
+
+#nav-pad {
+    width: 100%;
+    height: 72px;
+}
+
+#foot-pad {
+    width: 100%;
+    height: 328px;
+}
+
+#home, #why-us, #not-found {
+    position: relative;
+    width: 100%;
+}
+
+.title-lg {
+    padding: 48px 0 24px 0;
+    line-height: 1;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: var(--txt-contrast);
+}
+
+.title-line-lg {
+    width: 96px;
+    height: 2px;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--txt-contrast);
+}
+
+.title-sm {
+    padding: 0 0 16px 0;
+    line-height: 1;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: var(--txt-contrast);
+}
+
+.title-line-sm {
+    width: 48px;
+    height: 2px;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--txt-contrast);
+}
+
+/* NOTIFY RULES */
+
+.notify {
+    visibility: hidden;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 100%;
+    padding: 16px 24px;
+    border-radius: 8px;
+    background-color: var(--info-main);
+    color: var(--txt-contrast);
+    opacity: 0;
+    box-shadow: 2px 2px 8px #00000060;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: 0.5s ease-out;
+}
+
+.notify h5 {
+    text-align: center;
+    line-height: normal;
+    font-weight: 500;
+}
+
+.notify.hide {
+    visibility: hidden;
+    top: 0;
+    opacity: 0;
+    -webkit-animation: fadeout 0.5s;
+    animation: fadeout 0.5s;
+}
+
+.notify.show {
+    visibility: visible;
+    top: 96px;
+    opacity: 1;
+    -webkit-animation: fadein 0.5s;
+    animation: fadein 0.5s;
+}
+
+.notify.info {
+    background-color: var(--info-main);
+}
+
+.notify.success {
+    background-color: var(--success-main);
+}
+
+.notify.warning {
+    background-color: var(--warning-main);
+}
+
+.notify.error {
+    background-color: var(--error-main);
+}
+
+/* MEDIA RULES */
+
+@media screen and (max-width: 1600px) {
+    :root {
+        --scale: 0.9;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 21px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+    h5 {
+        font-size: 14px;
+    }
+    h6 {
+        font-size: 12px;
+    }
+    #footPad {
+        height: 422px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    :root {
+        --scale: 0.85;
+    }
+    #navShow, #navHide {
+        max-width: 768px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    :root {
+        --scale: 0.8;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    h4 {
+        font-size: 14px;
+    }
+    h5 {
+        font-size: 12px;
+    }
+    h6 {
+        font-size: 10px;
+    }
+    .title {
+        margin-top: 56px;
+    }
+    /* .navBtn, .navBtnActive {
+        padding-top: 15.5px;
+    } */
+    #footPad {
+        height: 372px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    :root {
+        --scale: 0.75;
+    }
+    #navShow, #navHide {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --scale: 0.7;
+    }
+    #footPad {
+        height: 428px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        --scale: 0.667;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    h3 {
+        font-size: 14px;
+    }
+    h4 {
+        font-size: 12px;
+    }
+    h5 {
+        font-size: 10px;
+    }
+    h6 {
+        font-size: 9px;
+    }
+    #navShow, #navHide {
+        max-width: 320px;
+    }
+    #footPad {
+        height: 414px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #navPad {
+        height: 64px;
+    }
+    #navShow, #navHide {
+        max-width: 300px;
+    }
+}
+
+/* ANIMATION */
+
+@-webkit-keyframes fadein {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+    to {
+        top: 96px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+    to {
+        top: 96px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        top: 96px;
+        opacity: 1;
+    }
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        top: 96px;
+        opacity: 1;
+    }
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}

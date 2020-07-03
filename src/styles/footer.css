@@ -1,0 +1,95 @@
+/* FOOTER RULES */
+
+footer {
+    z-index: 100;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--primary-dark);
+    color: var(--txt-contrast);
+}
+
+#footer-top {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    background: #00000060;
+    text-align: center;
+}
+
+#footer-top a {
+    transition: 0.2s;
+}
+
+#footer-top a:hover {
+    color: var(--primary-light)
+}
+
+.footer-3 {
+    width: 100%;
+    padding: 48px;
+}
+
+.footer-block img {
+    vertical-align: top;
+    max-width: 32px;
+    min-width: 32px;
+    max-height: 32px;
+    min-height: 32px;
+    margin-bottom: 8px;
+    ;
+}
+
+.footer-break {
+    width: 100%;
+    height: 24px;
+}
+
+.footer-3 h4 {
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.footer-3 h6 {
+    line-height: 1.5;
+}
+
+.footer-line {
+    min-width: 2px;
+    min-height: 100%;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    background: #00000020;
+}
+
+#footer-bottom {
+    width: 100%;
+    padding: 16px 0;
+    background: #00000080;
+    text-align: center;
+    line-height: 1;
+}
+
+#footer-bottom p {
+    font-weight: 100;
+}
+
+#footer-bottom a {
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+#footer-bottom a:hover {
+    color: var(--primary-light)
+}
+
+#footer-icons {
+    padding: 24px 0 0 0;
+}
+
+.footer-icon {
+    max-width: 48px;
+    margin: 0 8px;
+}

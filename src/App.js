@@ -4,10 +4,10 @@ import { GlobalProvider } from './utils/Global';
 import { NotifyProvider } from './utils/Notify';
 import { ModalProvider } from './utils/Modal';
 
-import Nav from './components/Nav';
+import NavBar from './components/NavBar';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import NotFound from './pages/NotFound';
+import Lost from './components/Lost';
+import Home from './components/Home';
 
 export default function App() {
   return (<>
@@ -15,14 +15,14 @@ export default function App() {
       <GlobalProvider>
         <NotifyProvider>
           <ModalProvider>
-            <Nav />
-            <div id="navPad" />
+            <NavBar />
+            <div id="nav-pad" />
             <Switch>
               <Route exact path="/" component={() => <Home />} />
               <Route exact path="/home" component={() => <Home />} />
-              <Route component={() => <NotFound />} />
+              <Route component={() => <Lost />} />
             </Switch>
-            <div id="footPad" />
+            <div id="foot-pad" />
             <Footer />
           </ModalProvider>
         </NotifyProvider>
