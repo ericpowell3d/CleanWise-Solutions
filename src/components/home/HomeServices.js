@@ -1,33 +1,48 @@
 ////////// DEPENDENCIES //////////
 import React from 'react';
-import { Title } from '../_ui';
+import { Title, Subtitle } from '../_ui';
 
 ////////// COMPONENT //////////
 export default function HomeServices(props) {
+  const services = [
+    {
+      head: `DISINFECTING & CLEANING SERVICES`,
+      subhead: `Our solutions utilize EPA-approved COVID-19 disinfecting products and highly-qualified staff to provide a clean and sanitary environment for your patrons. We offer flexible programs to meet your\xa0disinfecting\xa0needs.`,
+      body: [
+        `One-Time Disinfection`,
+        `Periodic Disinfection`,
+        `Regular Disinfection`,
+      ],
+    },
+    {
+      head: `POST-CONSTRUCTION CLEANUP`,
+      subhead: `CleanWise Solutions understands the excitement construction milestones bring. We pride ourselves in attention-to-detail during the final clean to help bridge your confidence to the next stage of\xa0your\xa0project.`,
+      body: [
+        `Flexible work schedule and no-hassle scheduling`,
+        `Commercial or residential, large or small`,
+        `Robust disinfection protocol so it is move-in ready`,
+        `Adept quality control processes`,
+        `Experience with all floor types and care requirements`,
+      ],
+    },
+  ]
+
   return (<>
     <div id="home-services">
-      <Title txtStyle={{ color: `#505860a0` }} lineStyle={{ background: `#505860a0` }}>Services We Provide</Title>
+      <div className="media-box">
+        <Title lineStyle={{ background: `#505860a0` }}>Services We Provide</Title>
+        <div id="home-services-grid">
+          {services.map((item) =>
+            <div className="home-services-item">
+              <h4 className="home-services-item-head">{item.head}</h4>
+              <h6 className="home-services-item-subhead">{item.subhead}</h6>
+              <div className="home-services-item-list">
+                {item.body.map((bodyItem) => <h6 className="home-services-item-body">&#8226;&nbsp;&nbsp;&nbsp;{bodyItem}</h6>)}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   </>)
 }
-
-// SERVICES OFFERED
-//
-// Our primary services include but are not limited to the following:
-//
-// DISINFECTING & CLEANING SERVICES
-//
-// Whether you’re preparing for the next phase of reopening in your state or want to align with CDC guidelines, CleanWise Solutions is ready to help inform, plan, and execute on your COVID-19 mitigation protocol. CDC, State, and Local Health Departments recommend regular deep-cleaning and disinfection of high-touch surfaces. This includes surfaces from the bathroom to the boardroom and everywhere in between. Our solutions utilize EPA-approved COVID-19 disinfecting products and highly-trained and qualified staff to provide a clean and sanitary environment for your patrons. 
-// We offer flexible programs to meet your disinfecting needs:
-// * One-Time Disinfection
-// * Periodic Disinfection
-// * Regular Disinfection
-//
-// POST-CONSTRUCTION CLEANUP
-//
-// CleanWise Solutions understands the excitement construction milestones bring. The final clean milestone can inspire confidence if done well and on time and frustration if not. We pride ourselves in attention-to-detail during the final clean to help bridge your confidence to the next stage of your project.
-// * Flexible work schedule and no-hassle scheduling
-// * Commercial or residential, large or small
-// * Robust disinfection protocol so it is move-in ready
-// * Adept quality control processes
-// * Experience with all floor types and care requirements

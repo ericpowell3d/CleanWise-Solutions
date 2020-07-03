@@ -16,7 +16,7 @@ nav {
     display: flex;
     flex-wrap: nowrap;
     top: 0;
-    width: 1024px;
+    width: 1200px;
     margin-left: auto;
     margin-right: auto;
     transition: 0.25s ease-out;
@@ -27,7 +27,7 @@ nav {
     display: flex;
     flex-wrap: nowrap;
     top: -72px;
-    width: 1024px;
+    width: 1200px;
     margin-left: auto;
     margin-right: auto;
     transition: 0.5s ease-out;
@@ -35,7 +35,7 @@ nav {
 
 #nav-left {
     width: max-content;
-    padding: 12px 104px 12px 0px;
+    padding: 12px 192px 12px 0px;
 }
 
 #nav-left img {
