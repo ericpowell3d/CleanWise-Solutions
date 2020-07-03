@@ -112,18 +112,17 @@ textarea::placeholder {
 }
 
 .title-lg {
-    padding: 48px 0 24px 0;
+    padding: 0 0 24px 0;
     line-height: 1;
     text-align: center;
     font-weight: 500;
     letter-spacing: 3px;
-    color: var(--txt-contrast);
 }
 
 .title-line-lg {
     width: 96px;
     height: 2px;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     margin-left: auto;
     margin-right: auto;
     background: var(--txt-contrast);
@@ -135,7 +134,6 @@ textarea::placeholder {
     text-align: center;
     font-weight: 500;
     letter-spacing: 3px;
-    color: var(--txt-contrast);
 }
 
 .title-line-sm {
@@ -145,6 +143,20 @@ textarea::placeholder {
     margin-left: auto;
     margin-right: auto;
     background: var(--txt-contrast);
+}
+
+.subtitle {
+    line-height: 1.333;
+    font-weight: 400;
+    text-align: center;
+}
+
+.media-box {
+    position: relative;
+    min-width: 1200px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* NOTIFY RULES */
