@@ -26,6 +26,8 @@ export function GlobalProvider({ children }) {
   const checkPage = () => {
     if (window.location.pathname === `/`) setPage(`home`);
     else if (window.location.pathname === `/home`) setPage(`home`);
+    else if (window.location.pathname === `/why-us`) setPage(`why-us`);
+    else if (window.location.pathname === `/about`) setPage(`why-us`);
     else setPage(`404`);
 
     const element = document.getElementById(anchor);

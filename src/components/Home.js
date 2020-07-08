@@ -1,7 +1,6 @@
 ////////// DEPENDENCIES //////////
 import React from 'react';
 import { Global } from '../utils/Global';
-import { Notify } from '../utils/Notify';
 import HomeHero from './home/HomeHero';
 import HomeIndustries from './home/HomeIndustries';
 import HomeServices from './home/HomeServices';
@@ -11,8 +10,6 @@ import HomeHow from './home/HomeHow';
 export default function Home() {
   const { checkPage } = React.useContext(Global);
   React.useEffect(() => { checkPage(); });
-  // const notify = React.useContext(Notify);
-  // React.useEffect(() => { notify(`COVID-19 info alert placeholder`, `info`, 60000); }, []);
 
   return (<>
     <main id="home">

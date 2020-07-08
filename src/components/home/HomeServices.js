@@ -1,9 +1,10 @@
 ////////// DEPENDENCIES //////////
 import React from 'react';
-import { Title, Subtitle } from '../_ui';
+import { Title } from '../_ui';
 
 ////////// COMPONENT //////////
 export default function HomeServices(props) {
+  const title = `Services We Provide`;
   const services = [
     {
       head: `DISINFECTING & CLEANING SERVICES`,
@@ -28,16 +29,16 @@ export default function HomeServices(props) {
   ]
 
   return (<>
-    <div id="home-services">
+    <div id="home-services" className="section-box">
       <div className="media-box">
-        <Title lineStyle={{ background: `#505860a0` }}>Services We Provide</Title>
+        <Title lineStyle={{ background: `#505860a0` }}>{title}</Title>
         <div id="home-services-grid">
-          {services.map((item) =>
-            <div className="home-services-item">
+          {services.map((item, i) =>
+            <div key={`home-services-${i}`} className="home-services-item">
               <h4 className="home-services-item-head">{item.head}</h4>
               <h6 className="home-services-item-subhead">{item.subhead}</h6>
               <div className="home-services-item-list">
-                {item.body.map((bodyItem) => <h6 className="home-services-item-body">&#8226;&nbsp;&nbsp;&nbsp;{bodyItem}</h6>)}
+                {item.body.map((bodyItem, i) => <h6 key={`home-services-body-${i}`} className="home-services-item-body">&#8226;&nbsp;&nbsp;&nbsp;{bodyItem}</h6>)}
               </div>
             </div>
           )}

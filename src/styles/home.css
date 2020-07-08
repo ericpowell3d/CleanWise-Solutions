@@ -5,8 +5,8 @@
 #home-hero {
     position: relative;
     width: 100%;
-    height: 640px;
-    padding-top: 140px;
+    height: 800px;
+    padding-top: 222px;
     background: var(--background-dark);
     background-image: url(../images/clean4.jpg);
     background-repeat: no-repeat;
@@ -27,16 +27,12 @@
 }
 
 #home-hero-logo {
-    max-height: 260px;
+    max-height: 256px;
 }
 
 /* INDUSTRIES */
 
 #home-industries {
-    position: relative;
-    width: 100%;
-    padding: 64px 0;
-    text-align: center;
     background: var(--secondary-light);
     color: var(--txt-contrast);
 }
@@ -55,7 +51,7 @@
 }
 
 .home-industries-item-vector {
-    max-width: 96px;
+    max-height: 96px;
     margin-bottom: 24px;
     margin-left: auto;
     margin-right: auto;
@@ -74,10 +70,7 @@
 /* SERVICES */
 
 #home-services {
-    position: relative;
-    width: 100%;
-    padding: 64px 0;
-    background: var(--background-dark);
+    background: var(--background-white);
     color: var(--txt-secondary);
 }
 
@@ -95,14 +88,12 @@
 }
 
 .home-services-item-head {
-    text-align: center;
     font-weight: 500;
     margin-bottom: 12px;
     letter-spacing: 3px;
 }
 
 .home-services-item-subhead {
-    text-align: center;
     line-height: 1.333;
     font-weight: 400;
     margin-bottom: 12px;
@@ -115,7 +106,8 @@
     margin-top: 24px;
     margin-left: auto;
     margin-right: auto;
-    background: #00000012;
+    text-align: left;
+    background: #0000000f;
 }
 
 .home-services-item-body {
@@ -126,10 +118,6 @@
 /* HOW */
 
 #home-how {
-    position: relative;
-    width: 100%;
-    padding: 64px 0;
-    text-align: center;
     background: var(--primary-main);
     color: var(--txt-contrast);
 }

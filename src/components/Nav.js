@@ -7,33 +7,20 @@ import img_phone from '../images/vectors/phone.svg';
 import img_mail from '../images/vectors/mail.svg';
 
 ////////// COMPONENT //////////
-export default function NavBar(props) {
+export default function Nav(props) {
   const { page } = React.useContext(Global);
-
-  const [nav, setNav] = React.useState(`nav-show`);
-
-  let prev = window.pageYOffset;
-  window.onscroll = () => {
-    if (window.screen.width <= 1600 && window.screen.height <= 1024) {
-      let cur = window.pageYOffset;
-      if (prev > cur) setNav(`nav-show`);
-      else setNav(`nav-hide`);
-      prev = cur;
-    }
-    else setNav(`nav-show`);
-  }
 
   return (<>
     <nav>
-      <div id={nav}>
+      <div id="nav">
         <div id="nav-left">
           <Link to="/"><img src={img_logo} alt="CleanWise Solutions" /></Link>
         </div>
         <div id="nav-center">
-          <a href="tel:15408418766">
+          <a href="tel:15025149473">
             <div className="nav-center-block">
               <img style={{ marginRight: `8px` }} src={img_phone} alt="Phone" />
-              <h6>(540) 841-8766</h6>
+              <h6>(502) 514-WISE</h6>
             </div>
           </a>
           <div className="nav-center-break" />
@@ -53,7 +40,7 @@ export default function NavBar(props) {
           </Link>
           <div className="nav-btn-break" />
           <Link to="/why-us">
-            <div className={page === `about` ? "nav-btn-active" : "nav-btn"}>
+            <div className={page === `why-us` ? "nav-btn-active" : "nav-btn"}>
               <p>Why Us?</p>
               <div className="nav-btn-line" />
             </div>
