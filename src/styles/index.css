@@ -151,6 +151,13 @@ textarea::placeholder {
     text-align: center;
 }
 
+.section-box {
+    position: relative;
+    width: 100%;
+    padding: 80px 0;
+    text-align: center;
+}
+
 .media-box {
     position: relative;
     min-width: 1200px;

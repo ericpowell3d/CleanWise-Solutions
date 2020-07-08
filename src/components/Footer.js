@@ -44,7 +44,7 @@ export default function Footer(props) {
         <div className="footer-line" />
         <div className="footer-3">
           <Title size="sm">CONTACT US</Title>
-          <h5><a href="tel:15408418766">(540) 841-8766</a></h5>
+          <h5><a href="tel:15025149473">(502) 514-9473</a></h5>
           <div style={{ width: `100%`, height: `8px` }} />
           <h5><a href="mailto:info@cleanwisesolutions.com">info@cleanwisesolutions.com</a></h5>
           <div className="footer-break" />
