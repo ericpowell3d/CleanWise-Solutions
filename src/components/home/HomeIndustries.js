@@ -1,12 +1,12 @@
 ////////// DEPENDENCIES //////////
 import React from 'react';
 import { Title } from '../_ui';
-import img_0 from '../../images/vectors/corporate.svg';
-import img_1 from '../../images/vectors/education.svg';
-import img_2 from '../../images/vectors/religion.svg';
-import img_3 from '../../images/vectors/auto_body.svg';
-import img_4 from '../../images/vectors/warehouse_distribution.svg';
-import img_5 from '../../images/vectors/other.svg';
+import img_corporate from '../../images/vectors/corporate.svg';
+import img_education from '../../images/vectors/education.svg';
+import img_religion from '../../images/vectors/religion.svg';
+import img_auto_body from '../../images/vectors/auto_body.svg';
+import img_warehouse_distribution from '../../images/vectors/warehouse_distribution.svg';
+import img_other from '../../images/vectors/other.svg';
 
 ////////// COMPONENT //////////
 export default function HomeIndustries(props) {
@@ -38,12 +38,12 @@ export default function HomeIndustries(props) {
     },
   ]
   const vectors = [
-    img_0,
-    img_1,
-    img_2,
-    img_3,
-    img_4,
-    img_5,
+    img_corporate,
+    img_education,
+    img_religion,
+    img_auto_body,
+    img_warehouse_distribution,
+    img_other,
   ]
 
   return (<>
@@ -53,7 +53,7 @@ export default function HomeIndustries(props) {
         <div id="home-industries-grid">
           {industries.map((item, i) =>
             <div key={`home-industries-${i}`} className="home-industries-item">
-              <img className="home-industries-item-vector" src={vectors[i]} alt="Placeholder" />
+              <img className="home-industries-item-vector" src={vectors[i]} alt="Industry" />
               <h4 className="home-industries-item-head">{item.head}</h4>
               <h6 className="home-industries-item-body">{item.body}</h6>
             </div>

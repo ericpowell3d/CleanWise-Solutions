@@ -20,12 +20,14 @@ export default function Footer(props) {
     <footer>
       <div id="footer-top">
         <div className="footer-3">
+          <div className="footer-break" />
           <Title size="sm">OUR PROMISE</Title>
-          <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quasi, fugiat quidem animi similique dolor pariatur reprehenderit aliquam saepe soluta autem vitae. At molestias minima magni incidunt non mollitia earum?</h6>
+          <h6>Our commitment to quality and customer service is what sets us apart from&nbsp;other companies. Communication is the key to satisfaction and with CleanWise Solutions, you’ll never worry that the job won’t meet expectations. Whatever your business, we&nbsp;have&nbsp;a&nbsp;solution.</h6>
           <div className="footer-break" />
         </div>
         <div className="footer-line" />
         <div className="footer-3">
+          <div className="footer-break" />
           <Title size="sm">LINKS</Title>
           <h5><Link to="/">Home</Link>&nbsp;&nbsp;|&nbsp;&nbsp;<Link to="/why-us">Why Us?</Link></h5>
           <div id="footer-icons">
@@ -43,6 +45,7 @@ export default function Footer(props) {
         </div>
         <div className="footer-line" />
         <div className="footer-3">
+          <div className="footer-break" />
           <Title size="sm">CONTACT US</Title>
           <h5><a href="tel:15025149473">(502) 514-9473</a></h5>
           <div style={{ width: `100%`, height: `8px` }} />
