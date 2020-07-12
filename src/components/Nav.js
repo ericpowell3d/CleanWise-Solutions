@@ -5,6 +5,8 @@ import { Global } from '../utils/Global';
 import img_logo from '../images/branding/align_color.png';
 import img_phone from '../images/vectors/phone.svg';
 import img_mail from '../images/vectors/mail.svg';
+import img_media_logo from '../images/branding/txt_color.png';
+import img_media_menu from '../images/vectors/arrow.svg';
 
 ////////// COMPONENT //////////
 export default function Nav(props) {
@@ -20,14 +22,14 @@ export default function Nav(props) {
           <a href="tel:15025149473">
             <div className="nav-center-block">
               <img style={{ marginRight: `8px` }} src={img_phone} alt="Phone" />
-              <h6>(502) 514-WISE</h6>
+              <p>(502) 514-WISE</p>
             </div>
           </a>
           <div className="nav-center-break" />
           <a href="mailto:info@cleanwisesolutions.com">
             <div className="nav-center-block">
               <img style={{ marginRight: `10px` }} src={img_mail} alt="Email" />
-              <h6>info@cleanwisesolutions.com</h6>
+              <p>info@cleanwisesolutions.com</p>
             </div>
           </a>
         </div>
@@ -46,6 +48,8 @@ export default function Nav(props) {
             </div>
           </Link>
         </div>
+        <img id="nav-media-logo" src={img_media_logo} alt="CleanWise Solutions" />
+        <img id="nav-media-menu" src={img_media_menu} alt="CleanWise Solutions" />
       </div>
     </nav>
   </>)

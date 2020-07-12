@@ -2,7 +2,6 @@
 
 footer {
     z-index: 100;
-    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -12,7 +11,9 @@ footer {
 
 #footer-top {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
     width: 100%;
     background: #00000060;
     text-align: center;
@@ -27,7 +28,7 @@ footer {
 }
 
 .footer-3 {
-    width: 100%;
+    flex: 0 33%;
     padding: 48px;
 }
 
@@ -46,12 +47,6 @@ footer {
     height: 24px;
 }
 
-.footer-3 h4 {
-    line-height: 1;
-    font-weight: 500;
-    letter-spacing: 3px;
-}
-
 .footer-3 h6 {
     line-height: 1.5;
 }
@@ -66,10 +61,10 @@ footer {
 
 #footer-bottom {
     width: 100%;
-    padding: 16px 0;
+    padding: 16px 24px;
     background: #00000080;
     text-align: center;
-    line-height: 1;
+    line-height: 1.25;
 }
 
 #footer-bottom p {
@@ -92,4 +87,67 @@ footer {
 .footer-icon {
     max-width: 48px;
     margin: 0 8px;
+}
+
+#footer-icon-break {
+    display: none;
+}
+
+#footer-bottom-main {
+    display: block;
+}
+#footer-bottom-alt {
+    display: none;
+    font-size: 14px;
+}
+
+/* MEDIA RULES */
+
+@media screen and (max-width: 1600px) {
+    
+}
+
+@media screen and (max-width: 1280px) {
+    #footer-icon-break {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .footer-3 {
+        flex: 0 100%;
+        padding: 24px 48px;
+    }
+    .footer-line {
+        flex: 0 100%;
+        min-height: 2px;
+        margin: 0 24px;
+        background: #00000020;
+    }
+    #footer-icon-break {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+}
+
+@media screen and (max-width: 640px) {
+    #footer-bottom-main {
+        display: none;
+    }
+    #footer-bottom-alt {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #footer-icon-break {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    
 }
