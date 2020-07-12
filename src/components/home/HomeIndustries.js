@@ -14,7 +14,7 @@ export default function HomeIndustries(props) {
   const industries = [
     {
       head: `CORPORATE`,
-      body: `Our aim is to provide a clean, orderly & sanitary environment for your employees to focus on what matters. We add an air of clean professionalism to ensure your external audiences are comfortable and impressed with your attention\xa0to\xa0detail.`,
+      body: `Providing a clean, orderly, and sanitary environment for your employees and guests to focus on\xa0what\xa0matters.`,
     },
     {
       head: `EDUCATION`,
@@ -22,19 +22,19 @@ export default function HomeIndustries(props) {
     },
     {
       head: `RELIGION`,
-      body: `CleanWise Solutions understands the challenges of maintaining a pristine place of worship in high-traffic common use areas. Our experts are prepared to relieve the burden of cleaning your facility so you and your patrons can focus on\xa0what\xa0matters.`,
+      body: `Our experts are prepared to relieve the burden of cleaning your facility so you and your patrons can focus on\xa0what\xa0matters.`,
     },
     {
       head: `AUTO & BODY`,
-      body: `Whether it is a showroom, stockroom, or maintenance facility, cleanliness inspires your crew and your customers. CleanWise Solutions is ready to provide top-notch cleaning services to support the goals of your auto\xa0dealership.`,
+      body: `Whether it is a showroom, stockroom, or maintenance facility, we are ready to provide top-notch cleaning\xa0services.`,
     },
     {
       head: `WAREHOUSE & DISTRIBUTION`,
-      body: `Clean & organized distribution centers help maintain high-levels of efficiency & safety. Our CleanWise team will provide your warehouse with expert cleaning solutions so your employees can safely focus on their task\xa0at\xa0hand.`,
+      body: `Our team will provide your warehouse with expert cleaning solutions to ensure your facility stays clean, tidy, safe, and\xa0efficient.`,
     },
     {
       head: `OTHER`,
-      body: `If you’re a commercial, corporate, or otherwise non-residential entity in need of cleaning or disinfecting services, you’ve landed in the right spot. Give us a call or email us today to learn more about how CleanWise Solutions can be of service to\xa0your\xa0mission.`,
+      body: `Contact us today to find out how CleanWise Solutions can support the needs of your non-residential\xa0facility.`,
     },
   ]
   const vectors = [
@@ -52,9 +52,9 @@ export default function HomeIndustries(props) {
         <Title>{title}</Title>
         <div id="home-industries-grid">
           {industries.map((item, i) =>
-            <div key={`home-industries-${i}`} className="home-industries-item">
+            <div key={`home-industries-${i}`} className="home-industries-item" style={{ marginBottom: i < industries.length - 1 ? `48px` : 0 }}>
               <img className="home-industries-item-vector" src={vectors[i]} alt="Industry" />
-              <h4 className="home-industries-item-head">{item.head}</h4>
+              <h3 className="home-industries-item-head">{item.head}</h3>
               <h6 className="home-industries-item-body">{item.body}</h6>
             </div>
           )}

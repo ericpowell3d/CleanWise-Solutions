@@ -22,11 +22,11 @@ export default function WhyUsBlurb(props) {
   return (<>
     <div id="why-us-blurb">
       <div id="why-us-blurb-drop" className="media-box">
-        <Title lineStyle={{ background: `#505860a0` }}>{title}</Title>
+        <Title lineStyle={{ background: `#505860a0`, marginBottom: `24px` }}>{title}</Title>
         <br />
-        <Subtitle style={{ textAlign: `left` }}>{paragraph1}</Subtitle>
+        <p className="why-us-blurb-body">{paragraph1}</p>
         <br />
-        <Subtitle style={{ textAlign: `left` }}>{bulletTitle}</Subtitle>
+        <p className="why-us-blurb-body">{bulletTitle}</p>
         <br />
         <div id="why-us-blurb-grid">
           {bullets.map((item, i) =>
@@ -37,9 +37,9 @@ export default function WhyUsBlurb(props) {
           )}
         </div>
         <br />
-        <Subtitle style={{ textAlign: `left` }}>{paragraph2}</Subtitle>
+        <p className="why-us-blurb-body">{paragraph2}</p>
         <br />
-        <Subtitle style={{ textAlign: `left` }}>{paragraph3}</Subtitle>
+        <p className="why-us-blurb-body">{paragraph3}</p>
       </div>
     </div>
   </>)

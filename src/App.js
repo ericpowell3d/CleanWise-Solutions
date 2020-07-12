@@ -23,7 +23,6 @@ export default function App() {
             <Route exact path="/about" component={() => <WhyUs />} />
             <Route component={() => <Lost />} />
           </Switch>
-          <div id="foot-pad" />
           <Footer />
         </NotifyProvider>
       </GlobalProvider>

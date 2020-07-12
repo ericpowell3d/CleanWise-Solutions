@@ -34,7 +34,7 @@
 /* INDUSTRIES */
 
 #home-industries {
-    background: var(--secondary-light);
+    background: var(--secondary-main);
     color: var(--txt-contrast);
 }
 
@@ -47,8 +47,7 @@
 
 .home-industries-item {
     flex: 0 30%;
-    margin: 48px 0 0 0;
-    /* background: #ffffff20; */
+    margin: 0 12px;
 }
 
 .home-industries-item-vector {
@@ -83,9 +82,8 @@
 }
 
 .home-services-item {
-    flex: 0 48%;
-    margin: 12px 0 0 0;
-    /* background: #ffffff20; */
+    flex: 0 45%;
+    margin: 0 12px;
 }
 
 .home-services-item-head {
@@ -95,6 +93,7 @@
 }
 
 .home-services-item-subhead {
+    text-align: justify;
     line-height: 1.333;
     font-weight: 400;
     margin-bottom: 12px;
@@ -125,19 +124,34 @@
 
 #home-how-grid {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
 }
 
+#home-how-title {
+    flex: 0 18%;
+}
+
+#home-how-line {
+    flex: 0 2%;
+    min-height: 100%;
+    border-left: 2px solid var(--background-white);
+}
+
 .home-how-item {
     flex: 0 22%;
-    margin: 12px 0 0 0;
+    margin: 0 12px;
+}
+
+.home-how-item-fix {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .home-how-item-vector {
     max-height: 32px;
-    margin-top: 24px;
     margin-bottom: 16px;
     margin-left: auto;
     margin-right: auto;
@@ -150,6 +164,93 @@
 }
 
 .home-how-item-body {
-    margin-bottom: 24px;
     line-height: 1.333;
+}
+
+#home-how-hidden {
+    display: none;
+}
+
+/* MEDIA RULES */
+
+@media screen and (max-width: 1600px) {
+    .home-industries-item-vector {
+        max-height: 80px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #home-industries-grid, #home-services-grid, #home-how-grid {
+        justify-content: space-around;
+    }
+    .home-services-item {
+        flex: 0 45%;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    #home-how-title {
+        display: none;
+    }
+    #home-how-line {
+        display: none;
+    }
+    .home-how-item {
+        flex: 0 28%;
+    }
+    #home-how-hidden {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .home-industries-item {
+        flex: 0 45%;
+    }
+    .home-services-item {
+        flex: 0 100%;
+        margin: 0 64px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #home-hero {
+        height: 400px;
+        padding-top: 80px;
+    }
+    #home-hero-drop {
+        padding: 36px;
+    }
+    #home-hero-logo {
+        max-height: 160px;
+    }
+    .home-industries-item, .home-services-item, .home-how-item {
+        flex: 0 100%;
+        margin: 0 48px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #home-hero {
+        height: 360px;
+        padding-top: 90px;
+    }
+    #home-hero-drop {
+        padding: 24px;
+    }
+    #home-hero-logo {
+        max-height: 128px;
+    }
+    .home-industries-item, .home-services-item, .home-how-item {
+        margin: 0 12px;
+    }
+    .home-industries-item-vector {
+        max-height: 64px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .home-industries-item, .home-services-item, .home-how-item {
+        margin: 0;
+    }
 }
