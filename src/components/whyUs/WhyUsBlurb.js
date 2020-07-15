@@ -1,14 +1,14 @@
 ////////// DEPENDENCIES //////////
 import React from 'react';
-import { Title, Subtitle } from '../_ui';
+import { Title } from '../_ui';
 import img_check from '../../images/vectors/check.svg';
 
 ////////// COMPONENT //////////
 export default function WhyUsBlurb(props) {
   const title = `Why CleanWise Solutions?`;
-  const paragraph1 = `CleanWise Solutions is a locally owned and operated full service commercial cleaning company. We are committed to your satisfaction of our cleaning services and guarantee a hassle-free, no-nonsense experience from start to finish. We pride ourselves in serving as your partner, helping progress the needs of your organization, one expert cleaning at a time. Our team is prepared to help you plan and execute your COVID-19 mitigation protocol aligned with local, state, and\xa0CDC\xa0guidelines.`;
+  const paragraph1 = `CleanWise Solutions is a locally owned and operated (Alexandria, VA) full-service commercial cleaning company. We are committed to your satisfaction of our cleaning services and guarantee a hassle-free, no-nonsense experience from start to finish. We pride ourselves in serving as your partner, helping progress the needs of your organization, one expert cleaning at a time. Additionally, our team is prepared to help you plan and execute your COVID-19 mitigation protocol aligned with local, state, and CDC guidelines.`;
   const paragraph2 = `Your satisfaction is our top priority. We offer peace of mind through professional and affordable cleaning solutions that keep your business running and money in your pocket. Our commitment to quality and customer service is what sets us apart from other companies. We understand that communication is the key to satisfaction and with CleanWise Solutions you’ll never worry that the job won’t meet your expectations. Whatever your business, we have\xa0a\xa0solution.`;
-  const paragraph3 = `CleanWise Solutions serves a variety of corporate, commercial, and non-residential communities. Our flexible cleaning and disinfecting solutions are specifically tailored to meet the needs of your organization, regardless of facility size or type. Reach out to us today to start a conversation on how we can make your life cleaner\xa0and\xa0easier.`;
+  const paragraph3 = `CleanWise Solutions serves a variety of corporate, commercial, and non-residential communities. Our flexible cleaning and disinfecting solutions are specifically tailored to meet the needs of your organization, regardless of facility size or type. Reach out to us today to start a conversation on how we can make your life cleaner and easier.`;
   const bulletTitle = `So, why us?`;
   const bullets = [
     `First-Class Customer Service`,
