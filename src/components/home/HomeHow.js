@@ -5,8 +5,13 @@ import img_1 from '../../images/vectors/1.svg';
 import img_2 from '../../images/vectors/2.svg';
 import img_3 from '../../images/vectors/3.svg';
 
+import { Global } from '../../utils/Global';
+import TxtEdit from '../_ui/TxtEdit';
+
 ////////// COMPONENT //////////
 export default function HomeHow(props) {
+  const ctx = React.useContext(Global);
+
   const title = `How It Works`;
   const steps = [
     {
@@ -27,6 +32,8 @@ export default function HomeHow(props) {
     img_2,
     img_3,
   ]
+  
+  const [txtSteps, setTxtSteps] = React.useState(steps);
 
   return (<>
     <div id="home-how" className="section-box">
@@ -41,11 +48,11 @@ export default function HomeHow(props) {
             </div>
           </div>
           <div id="home-how-line" />
-          {steps.map((item, i) =>
+          {txtSteps.map((item, i) =>
             <div key={`home-how-${i}`} className="home-how-item" style={{ marginBottom: i < steps.length - 1 ? `48px` : 0 }}>
               <img className="home-how-item-vector" src={vectors[i]} alt="Step" />
-              <h4 className="home-how-item-head">{item.head}</h4>
-              <h6 className="home-how-item-body">{item.body}</h6>
+              {ctx.editMode ? <TxtEdit value={txtSteps} onChange={setTxtSteps} index={i} subvalue="head" /> : <h4 className="home-how-item-head">{item.head}</h4>}
+              {ctx.editMode ? <TxtEdit value={txtSteps} onChange={setTxtSteps} index={i} subvalue="body" /> : <h6 className="home-how-item-body">{item.body}</h6>}
             </div>
           )}
         </div>

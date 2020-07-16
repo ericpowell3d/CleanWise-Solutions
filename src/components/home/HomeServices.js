@@ -2,8 +2,13 @@
 import React from 'react';
 import { Title } from '../_ui';
 
+import { Global } from '../../utils/Global';
+import TxtEdit from '../_ui/TxtEdit';
+
 ////////// COMPONENT //////////
 export default function HomeServices(props) {
+  const ctx = React.useContext(Global);
+
   const title = `Services We Provide`;
   const services = [
     {
@@ -28,15 +33,17 @@ export default function HomeServices(props) {
     },
   ]
 
+  const [txtServices, setTxtServices] = React.useState(services);
+
   return (<>
     <div id="home-services" className="section-box">
       <div className="media-box">
         <Title lineStyle={{ background: `#505860a0` }}>{title}</Title>
         <div id="home-services-grid">
-          {services.map((item, i) =>
+          {txtServices.map((item, i) =>
             <div key={`home-services-${i}`} className="home-services-item" style={{ marginBottom: i < services.length - 1 ? `48px` : 0 }}>
-              <h3 className="home-services-item-head">{item.head}</h3>
-              <h6 className="home-services-item-subhead">{item.subhead}</h6>
+              {ctx.editMode ? <TxtEdit value={txtServices} onChange={setTxtServices} index={i} subvalue="head" /> : <h3 className="home-services-item-head">{item.head}</h3>}
+              {ctx.editMode ? <TxtEdit value={txtServices} onChange={setTxtServices} index={i} subvalue="subhead" /> : <h6 className="home-services-item-subhead">{item.subhead}</h6>}
               <div className="home-services-item-list">
                 {item.body.map((bodyItem, i) => <h6 key={`home-services-body-${i}`} className="home-services-item-body">&#8226;&nbsp;&nbsp;&nbsp;{bodyItem}</h6>)}
               </div>

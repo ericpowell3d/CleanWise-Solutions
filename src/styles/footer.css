@@ -101,6 +101,17 @@ footer {
     font-size: 14px;
 }
 
+#footer-edit-mode-txt {
+    display: inline;
+    font-size: 12px;
+    font-weight: 700 !important;
+    cursor: pointer;
+    transition: var(--anim-normal);
+}
+#footer-edit-mode-txt:hover {
+    color: var(--primary-main);
+}
+
 /* MEDIA RULES */
 
 @media screen and (max-width: 1600px) {

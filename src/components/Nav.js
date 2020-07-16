@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Global } from '../utils/Global';
+import { Notify } from '../utils/Notify';
 import img_logo from '../images/branding/align_color.png';
 import img_phone from '../images/vectors/phone.svg';
 import img_mail from '../images/vectors/mail.svg';
@@ -11,6 +12,9 @@ import img_media_menu from '../images/vectors/arrow.svg';
 ////////// COMPONENT //////////
 export default function Nav(props) {
   const { page } = React.useContext(Global);
+  const notify = React.useContext(Notify);
+  // eslint-disable-next-line
+  React.useEffect(() => { notify(`We can help mitigate the spread of COVID-19 in your facility. Find out how today: 502-514-9473 | info@cleanwisesolutions.com`, `info`, 60000); }, []);
 
   return (<>
     <nav>

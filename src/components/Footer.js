@@ -1,7 +1,7 @@
 ////////// DEPENDENCIES //////////
 import React from 'react';
-import { Link } from 'react-router-dom';
 import moment from 'moment';
+import { Link } from 'react-router-dom';
 import { Title } from './_ui';
 import img_yelp from '../images/vectors/yelp.svg';
 import img_facebook from '../images/vectors/facebook.svg';
@@ -9,8 +9,20 @@ import img_instagram from '../images/vectors/instagram.svg';
 import img_twitter from '../images/vectors/twitter.svg';
 import img_linked_in from '../images/vectors/linked_in.svg';
 
+import { Global } from '../utils/Global';
+import TxtEdit from './_ui/TxtEdit';
+
 ////////// COMPONENT //////////
 export default function Footer(props) {
+  const ctx = React.useContext(Global);
+
+  const handleEditMode = () => {
+    if (ctx.editMode) ctx.setEditMode(false);
+    else ctx.setEditMode(true);
+  }
+
+  const promise = `We promise to serve you as a partner, helping to further the mission of your organization by providing the highest quality cleaning services. Our commitment to quality and customer service is what sets us apart from other companies. Whatever your business, we have a solution for you.`;
+
   const links = [
     "https://www.yelp.com/biz/cleanwise-solutions-alexandria",
     "https://www.facebook.com/CleanWiseSolutions/",
@@ -19,6 +31,8 @@ export default function Footer(props) {
     "https://www.linkedin.com/company/cleanwisesolutions/",
     "https://ericpowell3d.com/",
   ];
+  
+  const [txtPromise, setTxtPromise] = React.useState(promise);
 
   return (<>
     <footer>
@@ -26,7 +40,7 @@ export default function Footer(props) {
         <div className="footer-3">
           <div className="footer-break" />
           <Title size="sm">OUR PROMISE</Title>
-          <h6>We promise to serve you as a partner, helping to further the mission of your organization by providing the highest quality cleaning services. Our commitment to quality and customer service is what sets us apart from other companies. Whatever your business, we have a solution&nbsp;for&nbsp;you.</h6>
+          {ctx.editMode ? <TxtEdit value={txtPromise} onChange={setTxtPromise} /> : <h6>{txtPromise}</h6>}
           <div className="footer-break" />
         </div>
         <div className="footer-line"><div className="footer-line-shape" /></div>
@@ -67,6 +81,7 @@ export default function Footer(props) {
       <div id="footer-bottom">
         <div className="footer-fix">
           <p id="footer-bottom-main">&copy;{moment().format(`YYYY`)}&nbsp;CleanWise&nbsp;Solutions. All&nbsp;Rights&nbsp;Reserved. &nbsp;|&nbsp; <a href={links[5]} target="_blank" rel="noopener noreferrer">Site&nbsp;Designer</a></p>
+          <p id="footer-edit-mode-txt" onClick={() => handleEditMode()}>{ctx.editMode ? `Save Changes (Refresh to Reset)` : `Activate Edit Mode`}</p>
           <p id="footer-bottom-alt">&copy;{moment().format(`YYYY`)}&nbsp;CleanWise&nbsp;Solutions. All&nbsp;Rights&nbsp;Reserved.<br /><a href={links[5]} target="_blank" rel="noopener noreferrer">Site&nbsp;Designer</a></p>
         </div>
       </div>

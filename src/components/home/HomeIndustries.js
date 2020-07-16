@@ -8,8 +8,13 @@ import img_auto_body from '../../images/vectors/auto_body.svg';
 import img_warehouse_distribution from '../../images/vectors/warehouse_distribution.svg';
 import img_other from '../../images/vectors/other.svg';
 
+import { Global } from '../../utils/Global';
+import TxtEdit from '../_ui/TxtEdit';
+
 ////////// COMPONENT //////////
 export default function HomeIndustries(props) {
+  const ctx = React.useContext(Global);
+
   const title = `Industries We Serve`;
   const industries = [
     {
@@ -46,16 +51,18 @@ export default function HomeIndustries(props) {
     img_other,
   ]
 
+  const [txtIndustries, setTxtIndustries] = React.useState(industries);
+
   return (<>
     <div id="home-industries" className="section-box">
       <div className="media-box">
         <Title>{title}</Title>
         <div id="home-industries-grid">
-          {industries.map((item, i) =>
+          {txtIndustries.map((item, i) =>
             <div key={`home-industries-${i}`} className="home-industries-item" style={{ marginBottom: i < industries.length - 1 ? `48px` : 0 }}>
               <img className="home-industries-item-vector" src={vectors[i]} alt="Industry" />
-              <h3 className="home-industries-item-head">{item.head}</h3>
-              <h6 className="home-industries-item-body">{item.body}</h6>
+              {ctx.editMode ? <TxtEdit value={txtIndustries} onChange={setTxtIndustries} index={i} subvalue="head" /> : <h3 className="home-industries-item-head">{item.head}</h3>}
+              {ctx.editMode ? <TxtEdit value={txtIndustries} onChange={setTxtIndustries} index={i} subvalue="body" /> : <h6 className="home-industries-item-body">{item.body}</h6>}
             </div>
           )}
         </div>
