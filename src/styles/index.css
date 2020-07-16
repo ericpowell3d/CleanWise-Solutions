@@ -8,9 +8,9 @@
     --secondary-light: #0080c8;
     --secondary-main: #005096;
     --secondary-dark: #003068;
-    --info-main: #005096;
+    --info-main: #202830cc;
     --success-main: #00b4a0;
-    --warning-main: #ffb400;
+    --warning-main: #ffa000;
     --error-main: #ff4064;
     --background-light: #e4eff4;
     --background-main: #e0ecf0;
@@ -166,6 +166,10 @@ textarea::placeholder {
     margin-right: auto;
 }
 
+.input-box {
+    width: 100%;
+}
+
 /* NOTIFY RULES */
 
 .notify {
@@ -178,7 +182,6 @@ textarea::placeholder {
     width: max-content;
     max-width: 100%;
     padding: 16px 24px;
-    border-radius: 8px;
     background-color: var(--info-main);
     color: var(--txt-contrast);
     opacity: 0;
