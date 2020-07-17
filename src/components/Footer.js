@@ -75,6 +75,8 @@ export default function Footer(props) {
           <h5><a href="tel:15025149473">(502) 514-9473</a></h5>
           <div style={{ width: `100%`, height: `8px` }} />
           <h5><a href="mailto:info@cleanwisesolutions.com">info@cleanwisesolutions.com</a></h5>
+          <div style={{ width: `100%`, height: `8px` }} />
+          <h5>Alexandria, VA 22302</h5>
           <div className="footer-break" />
         </div>
       </div>
