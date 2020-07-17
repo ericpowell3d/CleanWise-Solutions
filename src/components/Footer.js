@@ -83,7 +83,7 @@ export default function Footer(props) {
       <div id="footer-bottom">
         <div className="footer-fix">
           <p id="footer-bottom-main">&copy;{moment().format(`YYYY`)}&nbsp;CleanWise&nbsp;Solutions. All&nbsp;Rights&nbsp;Reserved. &nbsp;|&nbsp; <a href={links[5]} target="_blank" rel="noopener noreferrer">Site&nbsp;Designer</a></p>
-          <p id="footer-edit-mode-txt" onClick={() => handleEditMode()}>{ctx.editMode ? `Save Changes (Refresh to Reset)` : `Activate Edit Mode`}</p>
+          {/* <p id="footer-edit-mode-txt" onClick={() => handleEditMode()}>{ctx.editMode ? `Save Changes (Refresh to Reset)` : `Activate Edit Mode`}</p> */}
           <p id="footer-bottom-alt">&copy;{moment().format(`YYYY`)}&nbsp;CleanWise&nbsp;Solutions. All&nbsp;Rights&nbsp;Reserved.<br /><a href={links[5]} target="_blank" rel="noopener noreferrer">Site&nbsp;Designer</a></p>
         </div>
       </div>
