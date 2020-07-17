@@ -16,15 +16,15 @@ export default function HomeHow(props) {
   const steps = [
     {
       head: `SCHEDULE`,
-      body: `Fill out our contact form, give us a call, or send us an email to schedule your CleanWise\xa0Solution.`,
+      body: `Fill out our contact form, give us a call, or send us an email to schedule your cleaning solution\xa0today.`,
     },
     {
       head: `CLEANING PROGRAM`,
-      body: `Throughout your tailored Cleaning Program, we do what we do best to ensure your utmost\xa0satisfaction.`,
+      body: `Throughout your tailored cleaning program, we do what we do best to ensure your utmost\xa0satisfaction.`,
     },
     {
       head: `PEACE OF MIND`,
-      body: `We leave your facility spotless and sanitized, so you can focus on more important\xa0aspects.`,
+      body: `We leave your facility spotless, so your patrons can focus on the mission of your\xa0organization.`,
     },
   ]
   const vectors = [

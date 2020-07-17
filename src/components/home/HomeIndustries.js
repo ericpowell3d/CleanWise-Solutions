@@ -19,7 +19,7 @@ export default function HomeIndustries(props) {
   const industries = [
     {
       head: `CORPORATE`,
-      body: `Providing a clean, orderly, and sanitary environment for your employees and guests to focus on\xa0what\xa0matters.`,
+      body: `Providing a clean, orderly, and sanitary environment for your employees and guests to move the ball forward for\xa0your\xa0company.`,
     },
     {
       head: `EDUCATION`,
@@ -27,11 +27,11 @@ export default function HomeIndustries(props) {
     },
     {
       head: `RELIGION`,
-      body: `Our experts are prepared to relieve the burden of cleaning your facility so you and your patrons can focus on\xa0what\xa0matters.`,
+      body: `Our experts are prepared to relieve the burden of cleaning your facility, so you and your patrons can focus on\xa0what\xa0matters.`,
     },
     {
       head: `AUTO & BODY`,
-      body: `Whether it is a showroom, stockroom, or maintenance facility, we are ready to provide top-notch cleaning\xa0services.`,
+      body: `Whether it's a showroom, stockroom, or maintenance facility, we are ready to provide top-notch cleaning\xa0services.`,
     },
     {
       head: `WAREHOUSE & DISTRIBUTION`,
