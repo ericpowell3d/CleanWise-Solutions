@@ -29,7 +29,7 @@ export default function Footer(props) {
     "https://www.instagram.com/cleanwisesolutions/",
     "https://twitter.com/CleanWiseSol",
     "https://www.linkedin.com/company/cleanwisesolutions/",
-    "https://ericpowell3d.com/",
+    "https://ericpowell.dev/",
   ];
   
   const [txtPromise, setTxtPromise] = React.useState(promise);
